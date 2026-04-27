@@ -1,0 +1,45 @@
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  font-family: var(--font-sans);
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-md);
+}
+
+/* Customizing the default pivottable.css to match our theme */
+.container :global(.pvtUi) {
+  width: 100%;
+}
+
+.container :global(.pvtAxisContainer) {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+}
+
+.container :global(.pvtAttr) {
+  background: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-primary);
+  padding: var(--space-1) var(--space-2);
+}
+
+.container :global(.pvtVals) {
+  background: var(--color-bg-secondary);
+}
+
+.darkPivot :global(.pvtVal), 
+.darkPivot :global(.pvtTotal), 
+.darkPivot :global(.pvtGrandTotal) {
+  background: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+}
+
+.darkPivot :global(.pvtColLabel), 
+.darkPivot :global(.pvtRowLabel) {
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+}

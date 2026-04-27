@@ -1,0 +1,4 @@
+requests==2.31.0
+jupyter==1.0.0
+notebook==7.1.2
+ipykernel==6.29.3
