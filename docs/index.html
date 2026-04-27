@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Documentation and Technical specs for the Wizcraft AgentViz MFE Platform.">
+  <title>Wizcraft AgentViz — Documentation</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <nav class="navbar">
+    <div class="nav-content">
+      <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+        Wizcraft AgentViz
+      </div>
+      <div class="nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#features">Deep Features</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#setup">Advanced Setup</a>
+        <a href="https://github.com/Aditya148/wizcraft" target="_blank" class="github-btn">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <div class="badge">v1.0.0 MFE Release</div>
+      <h1>Intelligent Agentic <span class="gradient-text">Visualization</span> Dashboard</h1>
+      <p>A Micro-Frontend Platform allowing LangGraph AI agents to autonomously build advanced statistical dashboards, orchestrate Pivot tables, query 3D vectors via sockets, and dynamically register custom UI Widgets.</p>
+      <div class="hero-buttons">
+        <a href="#setup" class="btn btn-primary">Get Started</a>
+        <a href="#features" class="btn btn-secondary">Explore Architecture</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="overview" class="setup">
+      <div class="container">
+        <h2>Platform Overview</h2>
+        <p class="section-desc">What separates Wizcraft AgentViz from traditional charting libraries?</p>
+        <div class="code-block" style="background: transparent; border: none;">
+          <p style="color: var(--text-muted); font-size: 1.05rem;">
+            Traditional dashboards require manual configuration. Wizcraft is built for the AI era. You write your statistical algorithms in Python (e.g. using LangGraph + Pandas), and your agent automatically pushes standardized JSON <code>viz_config</code> payloads to the UI via Socket.IO.<br><br>The UI platform instantly intercepts these packets securely, generating interactive, deeply native charts that adapt to data bounds—from standard Pie curves to 3D Scatters and dynamic Drag-and-Drop Pivot Tables.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="showcase">
+      <div class="container">
+        <h2>Dashboard UI Snapshots</h2>
+        <p class="section-desc">Observe the parallel widget rendering engine executing complex multivariate data.</p>
+        
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="images/1.png" alt="Full Dashboard View" loading="lazy">
+            <div class="img-caption">Platform top-level view: Showcasing Custom Pivot Tables, KPI blocks, Area Trends, and the Live Multi-Agent Grid interface.</div>
+          </div>
+          
+          <div class="gallery-item">
+            <img src="images/2.png" alt="Dashboard Details" loading="lazy">
+            <div class="img-caption">Bottom view showcasing Native Extensibility: Heatmap correlation matrices, geographical maps, linear regression overlays, and real-time Widget API Exports.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features" style="background: rgba(139, 92, 246, 0.03);">
+      <div class="container">
+        <h2>Comprehensive Features Toolkit</h2>
+        <div class="feature-grid">
+          
+          <div class="feature-card">
+            <div class="feature-icon">📈</div>
+            <h3>20+ Advanced ECharts</h3>
+            <p>Full support for Area, Bar, Scatter, Bubble, Radar, Funnel, Heatmaps, and specialized metrics out of the box with auto-calculated visual mapping limits.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">🌐</div>
+            <h3>3D GL Analytics</h3>
+            <p>Deploy ECharts GL to render `scatter3D` and embedded vector projector tools natively for large datasets straight from your Python backends.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">🧠</div>
+            <h3>Statistical Intelligence</h3>
+            <p>Upload raw CSV/JSON using the HTTP Data stream. Query your agent directly via the Floating Chatbot NLP UI seamlessly positioned in the active dashboard.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">🔌</div>
+            <h3>Custom Plugin API</h3>
+            <p>Extend runtime natively with <code>window.AgentViz.registerWidget</code>. Remote React components can be injected dynamically by users without touching source code!</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">🗂️</div>
+            <h3>Drag & Drop Pivot Tables</h3>
+            <p>Integrated <code>react-pivottable</code> allowing users to execute real-time cross-tabulations dynamically over massive JSON payloads dispatched by agents.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">🖨️</div>
+            <h3>Universal Export & Serialization</h3>
+            <p>Export any canvas immediately to PNG or raw layout Data to CSV. Serialize your entire active dashboard layout to a Base64 Hash to instantly share configured views via URL.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🔗</div>
+            <h3>Cross-Filtering Data</h3>
+            <p>The global <code>useCrossFilter</code> hook guarantees event-bus actions. Click a data bar in one visualization, and all other widgets filter automatically to match the selection.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">🗔</div>
+            <h3>Multi-Agent Live Feed Canvas</h3>
+            <p>Watch incoming LLM payloads group automatically into parallel multi-column CSS grids based dynamically on their original <code>agent_id</code> footprints.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="setup" class="setup">
+      <div class="container">
+        <h2>Deep Setup & Orchestration</h2>
+        <p class="section-desc">Follow these sequences to construct the full React/Vite topology locally.</p>
+        
+        <div class="code-block">
+          <div class="code-header">1. Platform Bootstrap</div>
+          <pre><code># Clone repository
+git clone https://github.com/Aditya148/wizcraft.git
+cd wizcraft
+
+# Install 19.x React frameworks and ecosystem packages
+npm install</code></pre>
+        </div>
+
+        <div class="code-block">
+          <div class="code-header">2. Launching Nodes</div>
+          <pre><code># Open Terminal 1: Spin up the Gateway (Socket.IO over HTTP Port 4000)
+npm run server
+
+# Open Terminal 2: Spin up the MFE Hot-Reload Host (Port 3000)
+npm run dev</code></pre>
+        </div>
+
+        <div class="code-block">
+          <div class="code-header">3. LangGraph Agent Example Invocation</div>
+          <pre><code># The platform allows Python processes to push datasets visually
+# First, install python socketIO clients
+pip install -r requirements.txt
+
+# Run the Jupyer reference pipeline
+jupyter notebook langgraph_agent_example.ipynb</code></pre>
+        </div>
+        
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Wizcraft. Built by Aditya148. Protected under the MIT License.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
